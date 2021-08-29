@@ -1,8 +1,15 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: false, 
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        astronaut: {
+          DEFAULT: '#2D3277',
+          darker: '#1B1F51'
+        }
+      }
+    },
   },
   variants: {
     extend: {},

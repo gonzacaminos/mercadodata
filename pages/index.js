@@ -1,11 +1,16 @@
-import Helmet from 'react-helmet'
+import Layout from '@/components/layout'
+import Nav from '@/components/nav'
+import Search from '@/components/search'
 
 export default function Home() {
   return (
-    <main>
-      <Helmet title="MercadoData" defer={false} />
-      
-      <h1>MercadoData</h1>
-    </main>
+    <Layout>
+      <div className="h-screen w-full p-10 bg-gradient-to-b from-astronaut to-astronaut-darker">
+        <div className="container mx-auto">
+          <Nav />
+          <Search />
+        </div>
+      </div>
+    </Layout>
   )
 }
