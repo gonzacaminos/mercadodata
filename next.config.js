@@ -7,5 +7,8 @@ module.exports = {
         require("tailwindcss"),
         require("./tailwind.config.js")
       ]
+    },
+    images: {
+      domains: ['http2.mlstatic.com'],
     }
 }
