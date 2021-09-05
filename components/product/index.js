@@ -34,7 +34,7 @@ export default function Product(props){
                        
                         
                     </div>
-                    <Attribute label={"Garantía"} value={product.warranty}/>
+                    {product.warranty && <Attribute label={"Garantía"} value={product.warranty}/> }
                     {location && <Attribute label={"Ubicación"} value={`${location.city.name}, ${location.state.name}, ${location.country.name}`}/> }
                 </div>
             </div>
