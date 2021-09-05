@@ -9,7 +9,7 @@ export default function Attribute(props){
 
     const value = props.format == 'date' ? formatDate(props.value) : props.value
     return (
-        <div className={`mt-6 mr-10 ${props.className}`}>
+        <div className={`mt-6 ${props.className}`}>
             <p className="text-xs text-gray-600 mb'2">{props.label}</p>
             <p className="text-sm text-astronaut capitalize">{value}</p>
         </div>

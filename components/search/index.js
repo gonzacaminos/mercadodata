@@ -3,6 +3,7 @@ import Product from '@/components/product';
 import { useRouter } from 'next/router'
 import {updateQuery, extractID} from  '@/components/utils';
 import Loader from '@/components/loader'
+import classnames from 'classnames'
 
 export default function Search() {
 
@@ -23,6 +24,7 @@ export default function Search() {
           return false;
         }
         setProduct(data)
+        setError(false)
       })      
     } else {
       showError('invalid')
@@ -64,17 +66,17 @@ export default function Search() {
   }
 
   return (
-    <div className="mt-20">
+    <div className="mt-12 md:mt-2 md:py-32">
         <form className="max-w-xl mx-auto" onSubmit={handleSubmit}>
-            <label className="text-white text-3xl font-black text-center mb-6 block">Pega el link o ID del producto que buscas</label>
+            <h2 className="text-white text-xl md:text-3xl font-black text-center mb-6 block">Pega el link o ID del producto que buscas</h2>
             <div className="flex relative">
-              <input type="text" placeholder="Link o ID de producto" className="text-lg font-light bg-gray-100 px-4 py-3 w-full rounded-md outline-none" onChange={handleChange} value={query}/>
+              <input type="text" placeholder="Link o ID de producto" className={classnames({'shadow-error': !product && query}, {'shadow-none shadow-success': product},'text-base md:text-lg font-light bg-gray-100 px-4 py-3 w-full rounded-md outline-none')} onChange={handleChange} value={query}/>
             </div>
         </form>     
         {product.title ? (
            <Product product={product}/>
         ) : (
-          <div className="text-center text-lg text-white font-black block mt-40">
+          <div className="text-center text-lg text-white font-black block my-28 md:mt-40">
             <p>{error}</p>
             <Loader className={`${error == errors.loading ? 'inline-block' : 'hidden'}`}/>
 
