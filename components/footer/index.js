@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="p-6 bg-astronaut">
         <div className="container mx-auto md:flex justify-between text-center">
             <p className="font-bold text-white">MERCADODATA | 2021</p>
-            <p className="font-bold text-white">Hecho con mate 🧉 y NextJS</p>
+            <p className="font-bold text-white">Hecho con mate 🧉 y <a className="underline" href="https://nextjs.org/">NextJS</a> </p>
         </div>
     </footer>  
     

@@ -17,10 +17,10 @@ export default function Content() {
   return (
     <Reveal trigger={<div />}>
       <FadeInRight>
-        <div className="px-5 py-20 md:p-20 max-w-xl mx-auto">
+        <div className="px-5 py-20 md:p-20 max-w-3xl mx-auto">
             <h2 className="font-black text-astronaut mb-8 text-center text-xl">¿Qué es este sitio?</h2>
             <p className="text-astronaut text-base text-center">
-                <p>Este sitio nace de una necesidad simple: <strong>conocer mas un producto antes de comprarlo.</strong> La mayoría de estos datos (salvo la fecha de creación/modificación) están disponibles en la página del producto pero a veces resulta difícil encontrarlos. </p> 
+                <p>Este sitio nace de una necesidad simple: <strong>conocer mas un producto de MercadoLibre antes de comprarlo.</strong> La mayoría de estos datos (salvo la fecha de creación/modificación) están disponibles en la página del producto pero a veces resulta difícil encontrarlos. En productos usados, sobre todo, es útil conocer lo mas posible sobre el producto antes de comprarlo.</p> 
                 <p className="mt-2">Este sitio hace uso de la <a className="underline" target="_blank" href="https://developers.mercadolibre.com.ar/"> API de MercadoLibre </a></p>
             </p>
         </div>
