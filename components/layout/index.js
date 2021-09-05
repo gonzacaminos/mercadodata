@@ -4,7 +4,7 @@ import Footer from '@/components/footer'
 
 export default function Layout(props) {
   return (
-    <main>
+    <main className="bg-white">
      <Head>
         <title>MercadoData</title>
         <meta name="description" content="Obtené información sobre tus productos de MercadoLibre"/>
